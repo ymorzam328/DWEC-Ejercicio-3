@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWECEjercicio3</title>
+    <script>
+    
+
+    function multiplica() {
+
+
+        document.getElementById("escribe").addEventListener('click', (event) => {
+        let num=parseInt(document.getElementById("numero").value);
+      
+        if (num>= 0 && num<=9){
+
+            document.querySelector("span").innerHTML="";
+
+            document.getElementById('escribe').innerText;
+            
+            setTimeout(()=>{
+                let lis="";
+
+                for (let i=1; i<10; i++) {
+
+            
+                    lis+=`<tr><td>${i}</td></tr> * <tr><td> ${numero} </td><td> =  </td> <td> ${i*numero}</td></tr>`
+
+                }
+                document.querySelector("table").innerHTML=lis; 
+            },3000);
+            
+
+        } else {
+
+            document.querySelector("span").innerHTML= " Inténtelo de nuevo";
+        }
+
+
+
+
+    });
+    
+}
+         
+    
+
+    </script> 
+</head>
+<body>
+  <form>  
+    <label for="numero">Escriba un número: </label>
+    <input type="number" id="numero" /> <span></span>
+    <button type="button" id="button" onclick="multiplica();">Click</button>
+   
+</form>
+<table>
+    <h2 id="escribe" ></h2>
+
+
+
+</table>
+</body>
+</html>
